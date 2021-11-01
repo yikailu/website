@@ -132,18 +132,6 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                Tags
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
               <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
                 About
@@ -286,6 +274,26 @@
                   
                 
                 
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"pP3gp0JBszXkLYEKTQcvdQqD-gzGzoHsz","appKey":"xdEH1hLBTuoYvNA9r033QD97","path":"window.location.pathname","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          Fluid.plugins.initFancyBox('#valine .vcontent img:not(.vemoji)');
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
 
               </article>
             
